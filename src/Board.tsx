@@ -26,9 +26,10 @@ const Board = () => {
   const [xIsNext, setXIsNext] = useState(true);
 
   const winner = calculateWinner(squares);
+  console.log(typeof winner);
   let status;
   if (winner) {
-    status = "Winner: " + (winner !== "X" ? "❤️ " : "💙");
+    status = "Winner: " + winner;
   } else {
     status = "Next player: " + (xIsNext ? "X" : "O");
   }
